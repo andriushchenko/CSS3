@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.header {
+  background-color: #39c2d7;
+  opacity: 0.9;
+  border: 1px solid white;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 20px -6px grey;
+  width: 900px;
+  height: 250px;
+  margin: 15px;
+}
+
+.steps {
+  font-size: 14px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  position: relative;
+}
+
+.step-unit {
+  font-family: FontAwesome;
+  width: 90px;
+  height: 90px;
+  border: 6px solid white;
+  border: 4px solid #217482;
+  text-align: center;
+  margin: 20px;
+  background: #E6E6E6;
+  position: absolute;
+  top: 40px;
+  -moz-border-radius: 50%; /*making round circle*/
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: -5px 5px 10px -2px #217482, 5px 5px 10px -2px #217482, /*making button shadows*/
+  5px -5px 10px -2px #E6E6E6, -5px -5px 10px -2px #E6E6E6,
+  inset -5px 5px 10px -2px #E6E6E6, inset 5px 5px 10px -2px #E6E6E6,
+  inset 5px -5px 5px -4px #217482, inset -5px -5px 5px -4px #217482;
+  -moz-box-shadow: -5px 5px 10px -2px #217482, 5px 5px 10px -2px #217482,
+  5px -5px 10px -2px #E6E6E6, -5px -5px 10px -2px #E6E6E6,
+  inset -5px 5px 10px -2px #E6E6E6, inset 5px 5px 10px -2px #E6E6E6,
+  inset 5px -5px 5px -4px #217482, inset -5px -5px 5px -4px #217482;
+  box-shadow: -5px 5px 10px -2px #217482, 5px 5px 10px -2px #217482,
+  5px -5px 10px -2px #E6E6E6, -5px -5px 10px -2px #E6E6E6,
+  inset -5px 5px 10px -2px #E6E6E6, inset 5px 5px 10px -2px #E6E6E6,
+  inset 5px -5px 5px -4px #217482, inset -5px -5px 5px -4px #217482;
+}
+
+/*buttons positioning*/
+.step-unit:first-child {
+  position: absolute;
+  left: 100px;
+}
+
+.step-unit:nth-child(2) {
+  position: absolute;
+  left: 300px;
+}
+
+.step-unit:nth-child(3) {
+  position: absolute;
+  left: 500px;
+}
+
+.step-unit:last-child {
+  position: absolute;
+  left: 700px;
+}
+
+/*styling and positioning icons*/
+a.done::after, .active::after,.disabled:not(:last-child)::after {
+  font-family: FontAwesome;
+  font-size: 28px;
+  position: absolute;
+  left: 125px;
+  top: 30px;
+}
+
+
+/* making check-icon*/
+a.done::after {
+  content: "\f00c";
+  pointer-events: none;
+}
+
+.steps a {
+  color: white;
+}
+
+/* making arrow-icons*/
+.active::after {
+  content: "\f061";
+}
+
+.disabled:not(:last-child)::after {
+  content: "\f061";
+  color: #217482;
+}
+
+a.done::after, .active::after {
+  color: white;
+}
+
+/*styling icons*/
+.fa-file-text-o::before, .fa-envelope-o::before, .fa-comments::before, .fa-coffee::before {
+  font-size: 42px;
+  display: inline-block;
+  margin: 20px 15px 50px 15px;
+}
+
+/* making first two icons blue*/
+.fa-file-text-o::before, .fa-envelope-o::before {
+  color: #39c2d7;
+}
+
+/* making last two icons grey*/
+.fa-comments::before, .fa-coffee::before {
+  color: #217482;
+}
+
+/* making active icon #F4FF4E*/
+.active {
+  background-color: #F4FF4E;
+  color: #F4FF4E;
+}
+
+/*transition - button click*/
+.done {
+  -webkit-transition: box-shadow .2s linear;
+  -moz-transition: box-shadow .2s linear;
+  -o-transition: box-shadow .2s linear;
+  transition: box-shadow .2s linear;
+}
+
+.done:hover {
+  background-color: #F4FF4E;
+  color: #F4FF4E;
+}
+
+.done:active {
+  -webkit-box-shadow: -5px 5px 10px -2px #E6E6E6, 5px 5px 10px -2px #E6E6E6,
+  5px -5px 10px -2px #217482, -5px -5px 10px -2px #217482;
+  -moz-box-shadow: -5px 5px 10px -2px #E6E6E6, 5px 5px 10px -2px #E6E6E6,
+  5px -5px 10px -2px #217482, -5px -5px 10px -2px #217482;
+  box-shadow: -5px 5px 10px -2px #E6E6E6, 5px 5px 10px -2px #E6E6E6,
+  5px -5px 10px -2px #217482, -5px -5px 10px -2px #217482;
+}
