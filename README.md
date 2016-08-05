@@ -1,3 +1,5 @@
+You can view https://andriushchenko.github.io/CSS3/
+
 ﻿Style a job applying steps page section according to provided design.
 
 - Page html markup should not be touched in process accept attaching links to stylesheets in page <head>. styles.css file with all necessary styles should be created and attached to the page.
